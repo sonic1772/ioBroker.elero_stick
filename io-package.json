@@ -1,0 +1,101 @@
+{
+	"common": {
+		"name": "elero_stick",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Elero Stick",
+		"titleLang": {
+			"en": "Elero Stick",
+			"de": "Elero Stick",
+			"ru": "Elero Stick",
+			"pt": "Elero Stick",
+			"nl": "Elero Stick",
+			"fr": "Elero Stick",
+			"it": "Elero Stick",
+			"es": "Elero Stick",
+			"pl": "Elero Stick",
+			"zh-cn": "Elero Stick"
+		},
+		"desc": {
+			"en": "Roller shutter control for Elero motors",
+			"de": "Roller shutter control for Elero motors",
+			"ru": "Roller shutter control for Elero motors",
+			"pt": "Roller shutter control for Elero motors",
+			"nl": "Roller shutter control for Elero motors",
+			"fr": "Roller shutter control for Elero motors",
+			"it": "Roller shutter control for Elero motors",
+			"es": "Roller shutter control for Elero motors",
+			"pl": "Roller shutter control for Elero motors",
+			"zh-cn": "Roller shutter control for Elero motors"
+		},
+		"authors": ["Sascha Lauterborn <sascha.lauterborn@outlook.de>"],
+		"keywords": ["elero", "shutter"],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "elero_stick.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/sonic1772/ioBroker.elero_stick/main/admin/elero_stick.png",
+		"readme": "https://github.com/sonic1772/ioBroker.elero_stick/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "iot-systems",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"adminUI": {
+			"config": "json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.1.13"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
